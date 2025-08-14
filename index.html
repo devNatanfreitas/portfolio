@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Natanael Freitas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #000000;       
+      --text: #ffffff;    
+      --muted: #9aa6b2;
+      --card: #070707;     
+      --accent: #60a5fa;   
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:'Inter',system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .25s ease,color .25s ease}
+    .container{max-width:980px;margin:0 auto;padding:1rem}
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem;border-radius:10px;margin-top:1rem;background:var(--card);transition:background .25s ease}
+    .brand{display:flex;flex-direction:column}
+    h1{font-size:1.5rem;margin:0}
+    .subtitle{color:var(--muted);font-size:0.95rem}
+    nav{display:flex;gap:0.75rem}
+    nav a{text-decoration:none;color:var(--text);font-weight:600}
+    .card{background:var(--card);border-radius:10px;padding:1rem;margin:1.25rem 0;box-shadow:0 6px 18px rgba(0,0,0,0.2);transition:background .25s ease,box-shadow .25s ease}
+    h2{margin-top:0}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+    .project-card{border-radius:8px;padding:0.85rem;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg,transparent,rgba(255,255,255,0.01));transition:border-color .2s ease}
+    .project-card h3{margin:0 0 0.5rem 0;font-size:1.05rem}
+    .project-card p{margin:0 0 0.6rem 0;color:var(--muted);font-size:0.95rem}
+    .btn-link{display:inline-block;padding:0.45rem 0.7rem;border-radius:8px;text-decoration:none;font-weight:600;border:1px solid transparent}
+    .btn-primary{background:var(--accent);color:black}
+    footer{padding:1.25rem;text-align:center;color:var(--muted);margin-top:2rem}
+    .meta{font-size:0.9rem;color:var(--muted)}
+    .contact a{color:var(--accent);text-decoration:none}
+    .top-row{display:flex;align-items:center;gap:1rem}
+
+    
+    @media (max-width:640px){header{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="card">
+      <div class="top-row">
+        <div class="brand">
+          <h1>Natanael Freitas de Azevedo</h1>
+          <div class="subtitle">Desenvolvedor Full‑Stack • Mobile • Backend</div>
+          <div class="meta">Fortaleza - CE • WhatsApp: +55 (85) 98789-4976</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:0.75rem">
+        <nav aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="sobre" class="card">
+      <h2>Sobre</h2>
+      <p>Sou estudante de Bacharelado em Ciência da Computação (UNIFOR, conclusão em Dez/2027) com experiência prática em desenvolvimento mobile (Flutter) e web/backend (Django, Node.js, Spring Boot). Tenho experiência em projetos full‑stack, integração com bancos de dados (MySQL, MongoDB) e boas práticas de engenharia de software. Busco oportunidades para aplicar meus conhecimentos, gerar impacto em produtos e crescer tecnicamente em equipes ágeis.</p>
+    </section>
+
+    <section id="projetos" class="card">
+      <h2>Projetos Relevantes</h2>
+      <div class="projects">
+        <article class="project-card">
+          <h3>Plataforma de E‑commerce</h3>
+          <p>Frontend em HTML/CSS/JS e backend em Django. API REST, design responsivo e autenticação básica. Deploy: Render.</p>
+          <a class="btn-link btn-primary" href="https://e-commerce-toui.onrender.com/" target="_blank" rel="noopener">Ver projeto</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Sistema de Gestão de Lava‑Jato</h3>
+          <p>Aplicação backend Java (Spring Boot) para gerenciar agendamentos, serviços e relatórios operacionais. Código no GitHub.</p>
+          <a class="btn-link btn-primary" href="https://github.com/devNatanFrei/Lava-Jato" target="_blank" rel="noopener">Ver projeto</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Sistema de Filmes</h3>
+          <p>App em Java com persistência em MySQL para catalogação, filtros e consultas eficientes.</p>
+          <a class="btn-link btn-primary" href="#" target="_blank" rel="noopener">Ver projeto</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Bet — Sistema de Apostas</h3>
+          <p>Sistema em Clojure com MySQL: registro de apostas, controle de saldo e cálculo de ganhos.</p>
+          <a class="btn-link btn-primary" href="https://github.com/devNatanFrei/bet-project" target="_blank" rel="noopener">Ver projeto</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Agenda de Contatos</h3>
+          <p>Aplicação Django com frontend simples: CRUD completo de contatos e autenticação.</p>
+          <a class="btn-link btn-primary" href="https://agenda-2l42.onrender.com/" target="_blank" rel="noopener">Ver projeto</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Pong (POO em Java)</h3>
+          <p>Jogo com UI em Swing, ranking persistente em banco de dados e uso de conceitos de POO.</p>
+          <a class="btn-link btn-primary" href="https://github.com/devNatanFrei/Pong" target="_blank" rel="noopener">Ver projeto</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="card">
+      <h2>Contato & Links</h2>
+      <p class="contact">Email: <a href="mailto:nattanael.freitas2341@gmail.com">nattanael.freitas2341@gmail.com</a> • WhatsApp: <a href="https://wa.me/5585987894976" target="_blank" rel="noopener">+55 (85) 98789‑4976</a></p>
+      <p class="contact">LinkedIn: <a href="https://www.linkedin.com/in/natanael-freitas-azev/" target="_blank" rel="noopener">natanael‑freitas‑azev</a> • GitHub: <a href="https://github.com/devNatanFrei" target="_blank" rel="noopener">devNatanFrei</a></p>
+      <p class="meta">Formação: Bacharelado em Ciência da Computação — UNIFOR (conclusão Dez/2027)</p>
+      <p class="meta">Certificações: AWS Academy Cloud Foundations (Jul/2025) • Java POO (Udemy) • Python (Udemy)</p>
+    </section>
+
+    <footer>
+      <div class="meta">&copy; 2025 Natanael Freitas. Currículo disponível em PDF mediante solicitação.</div>
+    </footer>
+  </div>
+
+</body>
+</html>
